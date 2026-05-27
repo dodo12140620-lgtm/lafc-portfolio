@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geunhoo Kim | Social Media & Content Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lafcBlack: '#000000',
+                        lafcGold: '#C39B62',
+                        lafcDarkGray: '#121212',
+                        lafcGray: '#1e1e1e',
+                        lafcLightGray: '#a3a3a3',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        // Image loading error handler to show a beautiful golden fallback
+        function handleImageError() {
+            const img = document.getElementById('avatar-img');
+            const fallback = document.getElementById('avatar-fallback');
+            if (img) img.style.display = 'none';
+            if (fallback) fallback.classList.remove('hidden');
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF3D1 0%, #C39B62 50%, #8A6F43 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-hover {
+            transition: all 0.3s ease;
+        }
+        .gold-border-hover:hover {
+            border-color: #C39B62;
+            box-shadow: 0 0 15px rgba(195, 155, 98, 0.3);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-lafcGold/20 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold tracking-wider text-white">
+                GEUNHOO <span class="text-lafcGold">KIM</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#about" class="hover:text-lafcGold transition-colors">ABOUT ME</a>
+                <a href="#experience" class="hover:text-lafcGold transition-colors">EXPERIENCE</a>
+                <a href="#portfolio" class="hover:text-lafcGold transition-colors">PORTFOLIO</a>
+                <a href="#skills" class="hover:text-lafcGold transition-colors">SKILLS</a>
+            </nav>
+            <a href="mailto:geunhok@uci.edu" class="bg-lafcGold hover:bg-white text-black font-bold px-4 py-2 rounded-full text-xs transition-all uppercase tracking-wider">
+                Contact Me
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center py-20 px-6 overflow-hidden">
+        <!-- Background Overlay / Visual Decor -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C39B62_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-lafcGold/10 rounded-full filter blur-[120px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-lafcGold/5 rounded-full filter blur-[120px]"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-lafcGold font-extrabold tracking-widest text-xs uppercase bg-lafcGold/10 px-4 py-1.5 rounded-full border border-lafcGold/30 inline-block mb-6">
+                Social Media & Content Creator
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
+                Capturing the Raw Energy of <br>
+                <span class="gold-gradient-text">Sports & Fan Culture</span>
+            </h1>
+            <p class="text-lafcLightGray text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Bridging 12 years of elite sports experience with cinematic visual storytelling. Film & Media Studies student at UC Irvine specialized in creating data-driven, viral-ready digital content for Gen Z audiences.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto bg-lafcGold hover:bg-white text-black font-extrabold px-8 py-4 rounded-lg transition-all transform hover:-translate-y-1 text-center">
+                    Explore My Portfolio <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/geunhoo-kim-424a52384" target="_blank" class="w-full sm:w-auto border border-white/20 hover:border-lafcGold text-white hover:text-lafcGold font-bold px-8 py-4 rounded-lg transition-all text-center">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Highlights / Key Numbers -->
+    <section class="bg-lafcDarkGray border-y border-lafcGold/10 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-3xl md:text-5xl font-black text-lafcGold mb-2">10x</div>
+                <p class="text-xs md:text-sm text-lafcLightGray uppercase tracking-wider">Kross Baseball Reels Growth</p>
+            </div>
+            <div>
+                <div class="text-3xl md:text-5xl font-black text-white mb-2">180K+</div>
+                <p class="text-xs md:text-sm text-lafcLightGray uppercase tracking-wider">UKAL Sponsorship Views</p>
+            </div>
+            <div>
+                <div class="text-3xl md:text-5xl font-black text-lafcGold mb-2">12 Yrs</div>
+                <p class="text-xs md:text-sm text-lafcLightGray uppercase tracking-wider">Elite Athlete Experience</p>
+            </div>
+            <div>
+                <div class="text-3xl md:text-5xl font-black text-white mb-2">GPA 3.55</div>
+                <p class="text-xs md:text-sm text-lafcLightGray uppercase tracking-wider">Dean's Honor List at UCI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <!-- Decorative Golden Frame -->
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-lafcGold to-yellow-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                    <!-- Profile Card -->
+                    <div class="relative bg-lafcGray p-8 rounded-2xl border border-lafcGold/20 w-80 text-center">
+                        <!-- Profile Image Container with smart fallback -->
+                        <div class="w-36 h-36 bg-lafcDarkGray border-2 border-lafcGold rounded-full mx-auto mb-6 overflow-hidden flex items-center justify-center shadow-lg relative">
+                            <!-- Real Image (Will load in local environment or GitHub) -->
+                            <img id="avatar-img" src="KakaoTalk_20251216_205349843.jpg" alt="Geunhoo Kim Profile Photo" class="w-full h-full object-cover object-top scale-105" onerror="handleImageError()">
+                            
+                            <!-- Beautiful Fallback Emblem (Active when image file is not found) -->
+                            <div id="avatar-fallback" class="hidden absolute inset-0 bg-gradient-to-br from-lafcGray to-lafcBlack flex items-center justify-center">
+                                <span class="text-3xl font-extrabold tracking-wider text-lafcGold">GK</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">Geunhoo Kim</h3>
+                        <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">UC Irvine | Film & Media Studies</p>
+                        <div class="space-y-2 text-sm text-lafcLightGray text-left border-t border-white/10 pt-4">
+                            <p><i class="fa-solid fa-location-dot mr-2 text-lafcGold"></i> Irvine, California</p>
+                            <p><i class="fa-solid fa-envelope mr-2 text-lafcGold"></i> geunhok@uci.edu</p>
+                            <p><i class="fa-solid fa-phone mr-2 text-lafcGold"></i> (661) 936-6824</p>
+                        </div>
+                        <div class="flex justify-center space-x-4 mt-6">
+                            <a href="https://www.instagram.com/geunhoo_kim" target="_blank" class="text-lafcLightGray hover:text-lafcGold text-xl transition-colors">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/geunhoo-kim-424a52384" target="_blank" class="text-lafcLightGray hover:text-lafcGold text-xl transition-colors">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7 space-y-6">
+                <h2 class="text-3xl md:text-4xl font-extrabold">
+                    Why I am Perfect for <span class="text-lafcGold">LAFC2</span>
+                </h2>
+                <div class="h-1 w-20 bg-lafcGold mb-6"></div>
+                <p class="text-lafcLightGray leading-relaxed">
+                    <strong>1. Seamless Athlete & Locker Room Communication</strong><br>
+                    Having competed in organized baseball for 12 years across South Korea and the United States—including serving as Team Captain leading 45+ players—I naturally understand the daily lives, training environments, and psychologies of athletes. I can comfortably communicate with players and staff in high-pressure matchday settings, capturing raw, authentic, and engaging behind-the-scenes (BTS) content that fans crave.
+                </p>
+                <p class="text-lafcLightGray leading-relaxed">
+                    <strong>2. Proven, Data-Driven Short-Form Strategy</strong><br>
+                    I do not just create content; I optimize for performance. Managing social communications for Kross Baseball (representing 116 athletes), I optimized the content strategy to increase Instagram Reels performance by <strong>10x growth</strong> (from 100-200 to 1,000-2,000 average views). At UKAL, my sponsored campaigns achieved over 180,000 total views. I know exactly how to hook Gen Z and sports fans within the first 3 seconds.
+                </p>
+                <p class="text-lafcLightGray leading-relaxed">
+                    <strong>3. Ready for Live Matchday Operations</strong><br>
+                    With experience executing game-day operations for national tournaments at the Korea Baseball Softball Association (KBSA) and consulting on fan engagement strategies for the Orange County Riptide, I thrive in fast-paced live environments. I am fully prepared to manage real-time publishing, capture game highlights, and execute creative campaigns under tight deadlines.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Experiences -->
+    <section id="experience" class="bg-lafcDarkGray py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Core Experience</h2>
+                <div class="h-1 w-20 bg-lafcGold mx-auto"></div>
+                <p class="text-lafcLightGray mt-4">A proven track record in sports digital media, game-day logistics, and visual production.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Kross Baseball -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-chart-line text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">Oct 2025 - Present</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kross Baseball</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">Media Team Member (Remote)</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Managed and edited social media content representing 116 elite athletes.</li>
+                        <li class="text-white">Accelerated Instagram Reels performance by 10x, growing average views from 100-200 to 1,000-2,000.</li>
+                        <li>Collaborated with remote creatives to plan cohesive brand messaging and posting schedules.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Orange County Riptide -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-baseball-bat-ball text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">May 2026 - Present</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Orange County Riptide</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">KBO Theme Night Consultant</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Consulted on cultural authenticity and professional execution for the upcoming July KBO Theme Night.</li>
+                        <li class="text-white">Provided strategic insights on cheering culture, traditional chants, and localized fan engagement activities.</li>
+                        <li>Partnered with Game Day Operations to execute immersive cross-cultural activations.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: UKAL -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-share-nodes text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">Sept 2025 - Present</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">UKAL (United Korean American Leaders)</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">Media Team Member</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Filmed, edited, and directed highly shareable Reels using CapCut and Canva.</li>
+                        <li class="text-white">Maintained a strong visual identity generating average view counts of 8,000-10,000 per Reel.</li>
+                        <li class="text-white">Pioneered campaigns with Lotte Sweet Land, Sang Makgeolli, and Her Soju, reaching 180,000+ views.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: KBSA -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-ranking-star text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">Jun 2024 - Aug 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Korea Baseball Softball Association</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">Event Operations Staff</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Executed real-time game-day operations for national tournaments involving over 106 teams.</li>
+                        <li>Coordinated multi-channel communications between players, officials, and tournament staff.</li>
+                        <li>Managed field setup, in-game logistial shifts, and post-game breakdown during live matches.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: FADA (Camera DP/AC) -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-video text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">Jan 2026 - Present</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">FADA (Film Arts Drama Alliance)</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">Camera Crew (DP / AC)</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Operated heavy production equipment and handheld setups for narrative short film productions.</li>
+                        <li class="text-white">Designed compositions, camera movements, framing, and on-set workflows to optimize shoots.</li>
+                        <li>Developed a deep understanding of pacing, lighting, and cinematic visual storytelling.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Student-Athlete Captain -->
+                <div class="bg-lafcGray p-8 rounded-xl border border-white/5 gold-border-hover">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-lafcGold/10 rounded-lg text-lafcGold">
+                            <i class="fa-solid fa-people-group text-2xl"></i>
+                        </div>
+                        <span class="text-xs text-lafcLightGray font-mono">Oct 2012 - Nov 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Student-Athlete Leadership</h3>
+                    <p class="text-lafcGold text-xs font-semibold uppercase tracking-wider mb-4">Baseball Team Captain</p>
+                    <ul class="text-sm text-lafcLightGray space-y-2.5 list-disc list-inside">
+                        <li>Trained and competed in organized baseball for 12 years across South Korea and the United States.</li>
+                        <li>Appointed Team Captain of Ansan Technical HS, leading 45+ athletes while balancing academics.</li>
+                        <li>Contributed to two national third-place finishes and one regional championship title.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Live Works) -->
+    <section id="portfolio" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Featured Portfolios</h2>
+            <div class="h-1 w-20 bg-lafcGold mx-auto"></div>
+            <p class="text-lafcLightGray mt-4">Actual creative works, digital campaigns, and cinematic productions.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <!-- Portfolio 1: UKAL Instagram Reels -->
+            <div class="bg-lafcGray rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between h-full hover:border-lafcGold/50 transition-all">
+                <div class="p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="bg-gradient-to-tr from-pink-500 to-yellow-500 p-2.5 rounded-xl text-white">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">UKAL UCI Instagram</h3>
+                            <p class="text-lafcGold text-xs font-semibold tracking-wider">Social Marketing & Content Directing</p>
+                        </div>
+                    </div>
+                    <p class="text-lafcLightGray text-sm leading-relaxed mb-6">
+                        Served as the social content lead for UKAL UCI. By monitoring TikTok/Reels audio trends, executing high-energy editing, and designing engaging narrative arcs, I helped the account reach <strong>8,000 to 10,000 average views</strong> per Reel. Notably, brand sponsorship campaigns achieved a combined <strong>180,000+ views</strong>, enhancing localized engagement and online-to-offline traffic.
+                    </p>
+                    <div class="space-y-2 text-xs text-lafcLightGray bg-black/40 p-4 rounded-xl">
+                        <div>💡 <strong>LAFC2 Connection:</strong> Demonstrates a proven strategy for engaging local Southern California college students, driving digital interest directly into physical stadium presence.</div>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <a href="https://www.instagram.com/ukal_uci?igsh=NTc4MTIwNjQ2YQ==" target="_blank" class="block w-full bg-white/5 hover:bg-lafcGold hover:text-black text-center font-bold py-3.5 rounded-lg transition-all border border-white/10 hover:border-lafcGold">
+                        Visit UKAL Instagram <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portfolio 2: Video Production (FADA Film) -->
+            <div class="bg-lafcGray rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between h-full hover:border-lafcGold/50 transition-all">
+                <div class="p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="bg-red-600 p-2.5 rounded-xl text-white">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Shadowing (2026)</h3>
+                            <p class="text-lafcGold text-xs font-semibold tracking-wider">Short Horror Film | Cinematography & Edit</p>
+                        </div>
+                    </div>
+                    <!-- Mock Visual Placeholder for the Movie -->
+                    <div class="relative w-full h-44 bg-lafcDarkGray border border-white/10 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                        <!-- Simulated Dark Cinematic Screen -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                        <i class="fa-regular fa-circle-play text-5xl text-lafcGold hover:scale-110 transition-transform cursor-pointer relative z-10"></i>
+                        <span class="absolute bottom-3 left-4 text-xs font-mono text-lafcLightGray relative z-10">FADA Film Production (2026)</span>
+                    </div>
+                    <p class="text-lafcLightGray text-sm leading-relaxed mb-6">
+                        Operated as Director of Photography (DP) and Assistant Camera (AC) for 'Shadowing,' an official UCI student film festival entry. Developed strong competencies in color grading, micro-pacing, audio-visual alignment, and motion-tracking camera techniques. 
+                    </p>
+                    <div class="space-y-2 text-xs text-lafcLightGray bg-black/40 p-4 rounded-xl">
+                        <div>💡 <strong>LAFC2 Connection:</strong> Verifies technical ability to operate high-end camera equipment, adapt to rapid environmental changes, and turn raw on-pitch footage into high-quality recap/hype videos in Premiere Pro.</div>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <a href="https://www.youtube.com/watch?v=XF7v6Hz77Ww" target="_blank" class="block w-full bg-lafcGold text-black text-center font-bold py-3.5 rounded-lg transition-all hover:bg-white">
+                        Watch "Shadowing" Short Film <i class="fa-solid fa-play ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portfolio 3: Personal Branding & Content Capture -->
+            <div class="bg-lafcGray rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between h-full hover:border-lafcGold/50 transition-all">
+                <div class="p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="bg-gradient-to-tr from-purple-600 to-indigo-500 p-2.5 rounded-xl text-white">
+                            <i class="fa-solid fa-clapperboard text-2xl"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Geunhoo Kim Creative</h3>
+                            <p class="text-lafcGold text-xs font-semibold tracking-wider">Personal Creative Portfolio</p>
+                        </div>
+                    </div>
+                    <p class="text-lafcLightGray text-sm leading-relaxed mb-6">
+                        My personal channel serves as a sandbox for testing short-form hooks, editing transitions, and trending audio integrations. Building content both in front of and behind the lens has given me a comprehensive, 360-degree understanding of modern digital culture, platform algorithms, and visual branding.
+                    </p>
+                    <div class="space-y-2 text-xs text-lafcLightGray bg-black/40 p-4 rounded-xl">
+                        <div>💡 <strong>LAFC2 Connection:</strong> Demonstrates a constant passion for adapting to real-time algorithm shifts, bringing rapid-fire creative ideation to live matchday environments.</div>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <a href="https://www.instagram.com/geunhoo_kim" target="_blank" class="block w-full bg-white/5 hover:bg-lafcGold hover:text-black text-center font-bold py-3.5 rounded-lg transition-all border border-white/10 hover:border-lafcGold">
+                        Visit Personal Instagram <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portfolio 4: Sports Marketing & Cheering Culture -->
+            <div class="bg-lafcGray rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between h-full hover:border-lafcGold/50 transition-all">
+                <div class="p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="bg-lafcGold/20 p-2.5 rounded-xl text-lafcGold">
+                            <i class="fa-solid fa-heart-circle-bolt text-2xl"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Sports Fan Engagement Ideation</h3>
+                            <p class="text-lafcGold text-xs font-semibold tracking-wider">Orange County Riptide / KBSA Insights</p>
+                        </div>
+                    </div>
+                    <p class="text-lafcLightGray text-sm leading-relaxed mb-6">
+                        Synthesized global sports culture dynamics, focusing heavily on KBO's world-class fan cheering culture, to propose cross-cultural game-day promotions for the OC Riptide. Crafted digital-to-physical journey mapping designed to maximize student crowd density and stadium energy during promotional nights.
+                    </p>
+                    <div class="space-y-2 text-xs text-lafcLightGray bg-black/40 p-4 rounded-xl">
+                        <div>💡 <strong>LAFC2 Connection:</strong> Provides a strategic framework for designing localized campaigns, half-time activations, and digital content specifically built to mobilize LA's multicultural community.</div>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <div class="block w-full bg-black/60 text-lafcGold text-center font-bold py-3.5 rounded-lg border border-lafcGold/10">
+                        <i class="fa-solid fa-circle-check mr-1 text-xs"></i> Ready for LAFC2 Content Production
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-lafcDarkGray py-24 px-6 border-t border-lafcGold/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Core Skills</h2>
+            <div class="h-1 w-20 bg-lafcGold mx-auto mb-16"></div>
+            
+            <div class="grid md:grid-cols-3 gap-12 text-left">
+                <!-- Media & Tools -->
+                <div>
+                    <h4 class="text-lafcGold font-bold text-lg mb-6 uppercase tracking-wider"><i class="fa-solid fa-camera mr-2"></i> Media & Tools</h4>
+                    <ul class="space-y-3.5 text-lafcLightGray">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> CapCut & Premiere Pro Editing</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Canva Digital Design</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> DSLR / Handheld Camera Work</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Real-time Mobile Video Shoot</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> MS Excel & PowerPoint</li>
+                    </ul>
+                </div>
+                
+                <!-- Sports Professionalism -->
+                <div>
+                    <h4 class="text-lafcGold font-bold text-lg mb-6 uppercase tracking-wider"><i class="fa-solid fa-trophy mr-2"></i> Sports Competence</h4>
+                    <ul class="space-y-3.5 text-lafcLightGray">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> 12 Yrs Elite Athlete Background</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Player-Staff Relationship Building</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Game-Day Logistics & Ops</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Fan Experience Mapping</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> KBO & Global Sports Culture</li>
+                    </ul>
+                </div>
+
+                <!-- Personal Traits -->
+                <div>
+                    <h4 class="text-lafcGold font-bold text-lg mb-6 uppercase tracking-wider"><i class="fa-solid fa-language mr-2"></i> Communication</h4>
+                    <ul class="space-y-3.5 text-lafcLightGray">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> English (Fluent)</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Korean (Native)</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Japanese (Conversational)</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Strong Leadership (Team Captain)</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-lafcGold mr-2"></i> Fast, Agile Multi-tasking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 px-6 text-center border-t border-lafcGold/20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold tracking-wider mb-2">GEUNHOO <span class="text-lafcGold">KIM</span></h2>
+            <p class="text-lafcLightGray text-sm mb-8">Ready to bring creative storytelling to LAFC2.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/geunhoo-kim-424a52384" target="_blank" class="w-10 h-10 rounded-full bg-lafcGray hover:bg-lafcGold hover:text-black flex items-center justify-center text-xl transition-all">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/geunhoo_kim" target="_blank" class="w-10 h-10 rounded-full bg-lafcGray hover:bg-lafcGold hover:text-black flex items-center justify-center text-xl transition-all">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:geunhok@uci.edu" class="w-10 h-10 rounded-full bg-lafcGray hover:bg-lafcGold hover:text-black flex items-center justify-center text-xl transition-all">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+            <p class="text-xs text-lafcLightGray/50">&copy; 2026 Geunhoo Kim. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
